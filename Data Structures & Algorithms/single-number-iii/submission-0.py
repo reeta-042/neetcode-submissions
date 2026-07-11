@@ -1,0 +1,11 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> List[int]:
+
+        hashset = set()
+        for n in nums:
+            if n in hashset:
+                hashset.remove(n)
+            else:
+                hashset.add(n)
+        return list(hashset)
+        
